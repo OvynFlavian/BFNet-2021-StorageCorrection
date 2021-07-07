@@ -1,0 +1,22 @@
+﻿@model BFNet_2021_StorageCorrection.Models.Views.ImageListVM
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Image uri</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(string uri in Model.Uris)
+            {
+                <tr>
+                    <td><img src="@uri" class="img-fluid" /></td>
+                </tr>
+            }
+    </tbody>
+</table>
